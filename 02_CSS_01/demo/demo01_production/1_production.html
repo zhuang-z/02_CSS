@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS 修饰HTML页面的语言</title>
+		<!-- 内部样式表 -->
+		<style>
+			span{
+				color:green;
+				border: 2px black dashed;
+			}
+		</style>
+		<!-- 外部样式表 -->
+		<link rel="stylesheet" href="1.css" type="text/css"/>
+	</head>
+	<body>
+		<!-- 内联样式 > 内部样式表 > 外部样式表 优先级顺序 -->
+		<h1>CSS 是一门专门用来修饰HTML网页的语言</h1>
+		<!-- 把P元素的字体变成红色，字体大小为14px -->
+		<p style="color:red; font-size:14px;">好好爱自己，才有人会爱你。</p>    <!-- 内联样式-->
+		<!-- 把p元素的“只有你”字体变成绿色，用黑色虚线框起来 -->
+		<p>天真的<span>只有你</span>，令神仙鱼归天要怪谁。</p>  <!-- 内部样式表 -->
+	</body>
+</html>
