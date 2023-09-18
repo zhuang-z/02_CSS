@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>背景 background</title>
+		<style type="text/css">
+			body{
+				background-color: dodgerblue;  /* 背景颜色*/
+				background-image:url("cover.png"),url("dd.png"); 
+				/* 背景图片，当有背景颜色和背景图片时，背景图片会覆盖背景颜色,多个图片用逗号隔开，前面的会显示在后面的上层*/
+				background-repeat: no-repeat;   
+				/* 图片不够大会重复显示来填充浏览器，设置no-repeat即可不重复显示
+				但它们可以缩放 (使用 round) 或者均匀地分布 (使用 space)。
+				round ： 随着允许的空间在尺寸上的增长, 被重复的图像将会伸展(没有空隙), 
+				直到有足够的空间来添加一个图像. 当下一个图像被添加后, 所有的当前的图像会被压缩来腾出空间。
+				
+				space ： 图像会尽可能得重复, 但是不会裁剪. 
+				第一个和最后一个图像会被固定在元素(element)的相应的边上, 
+				同时空白会均匀地分布在图像之间. background-position属性会被忽视, 
+				除非只有一个图像能被无裁剪地显示. 只在一种情况下裁剪会发生, 
+				那就是图像太大了以至于没有足够的空间来完整显示一个图像。*/
+			   
+				background-position: right top; 
+				/* 设置背景的位置  background-position:10px 50px; 
+				第一个10px是与元素水平的距离，第二个50px是与元素垂直的距离
+				
+				A（top、left、right、bottom、center）两两组合	如果仅规定了一个关键词，那么第二个值将是”center”。默认值：0% 0%。
+				B（x% y%）	第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果仅规定了一个值，另一个值将是 50%。
+				C(xpos ypos)	第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。可以混合使用 % 和 position 值。
+				
+				*/
+				
+			}
+			h1,p{
+				margin-left: 40%;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<h1>《道德经》</h1>
+		<p>道可道，非常道；名可名，非常名。</p>
+		<p>无名，天地之始，有名，万物之母。</p>
+		<p>故常无欲，以观其妙，常有欲，以观其徼。</p>
+		<p>此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。</p>
+	</body>
+</html>
