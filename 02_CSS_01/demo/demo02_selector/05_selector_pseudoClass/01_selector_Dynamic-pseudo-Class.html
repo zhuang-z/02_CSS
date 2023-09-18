@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动态伪类选择器</title>
+		<style type="text/css">
+			/*link visited hover active先后顺序  hover和active要在link和visited后面，active要在hover后面 */
+			/* 未访问的链接 浏览器有历史记录，此样式会不显示，直接显示visited样式*/
+			a:link{
+				color:gray;   
+			}
+			/* 已访问的链接 */
+			a:visited{
+				color:green;
+			}
+			/* 鼠标悬停 */
+			a:hover{
+				color:red;
+			}
+			/* 点击一下，选择但不松手 active可能会在不能点击的元素上面也能生效，比如点击p元素也会变颜色*/
+			a:active{
+				color: aqua;
+			}
+			
+			div:hover{
+				color:green;
+			}
+			/* 当鼠标点进文本框时，文本框变成灰色 */
+			input:focus{  
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://www.zhihu.com/" target="_blank"">百度一下你就知道</a>
+		<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, nesciunt? Magnam provident ratione optio repudiandae ipsam laborum minima perferendis animi maxime voluptatum quisquam consectetur mollitia eligendi facilis magni, officia non!</h1>
+		<div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus illo deleniti ad placeat veritatis. Quos harum, cupiditate necessitatibus optio perferendis, cum nihil, quibusdam eius nulla reiciendis nostrum obcaecati est et.</div>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, et! Amet recusandae reiciendis impedit fugiat laudantium sit. Corrupti illo ipsa omnis necessitatibus nam velit, suscipit impedit aspernatur, ex rerum magni.</p>
+		<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quibusdam est aliquam. Id, exercitationem odit autem dicta quas recusandae non impedit nulla cumque fuga, molestias ratione. Eum velit maxime amet!</span>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi nam, magnam repellendus commodi quas alias vel rerum debitis. Nesciunt doloribus qui tempora ullam dolores obcaecati totam id neque porro quam.</p>
+		<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sit asperiores distinctio quisquam culpa velit magnam modi natus, perferendis inventore? Natus explicabo amet magni, ullam molestias deserunt omnis modi? Quos?</div>
+		名字：<input /><br>
+		性别：<input /><br>
+	</body>
+</html>

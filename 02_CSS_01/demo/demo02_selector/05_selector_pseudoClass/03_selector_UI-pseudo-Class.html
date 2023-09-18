@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UI伪类选择器</title>
+		
+		<!--	:enabled 选择器匹配每个已启用的元素（大多用在表单元素上）。
+				:disabled 选择器匹配每个被禁用的元素（大多用在表单元素上）。
+				:checked 选择器用于表示选中状态的radio(<input type="radio">), 
+				checkbox (<input type="checkbox">) 或select元素中的option HTML元素(“option”)。
+				:required 选择器在表单元素是必填项时设置指定样式。
+				:optional 选择器在表单元素是可选项时设置指定样式。表单分为可选和必填
+				:default选择器用于表示默认状态的按钮（<input type="button">），
+				radio(<input type="radio">), checkbox (<input type="checkbox">) 或select元素中的option HTML元素(“option”)。
+				:valid 选择器在表单元素的值需要根据指定条件验证时设置指定样式。
+				:invalid 选择器用于在表单元素中的值是非法时设置指定样式。
+				:in-range选择器用于标签的值在指定区间值时显示的样式。
+				:out-of-range 选择器用于标签的值在指定区间之外时显示的样式。
+				:read-only 选择器用于选取设置了 “readonly” 属性的元素。
+				:read-only 选择器适用于 input 和 textarea 元素，但是它也适用于设置了 “readonly” 属性的元素。
+				注意：如果使用 Firefox 浏览器，需要在样式前面添加前缀 -moz-
+				:read-write 选择器用于选取设置非 “readonly” 属性的元素。
+				:indeterminate选择器用于表示状态不确定的表单元素。
+		 -->
+		
+		<style type="text/css">
+			input[type="text"]:enabled{
+				background-color: pink;
+			}
+			input[type="text"]:disabled{
+				background-color: green;
+			}
+			
+			:checked + span{   /* 可以通过width和height修改单选框或者复选框的大小，但是一般都是修改后面的文本 通过兄弟选择器实现*/
+				color:green;
+			}
+			
+			:required{ /* 必填输入的文本框字体为yellow*/
+				color:green;
+			}
+			
+			:optional{  /* 可选择输入的文本框字体为yellow*/
+				color:yellow;
+			}
+			
+			:default{
+				border:1px solid green;
+			}
+			
+			:valid{  /* 邮箱地址合理显示绿色框*/
+				border: 1px solid green;
+			}
+			
+			:invalid{  /* 邮箱地址不合理显示红色框*/
+				border: 1px solid red;
+			}
+			
+			:in-range{  /* 数值在合理范围内字体为黑色*/
+				color:black;
+			}
+			
+			:out-of-range{  /* 数值超出范围字体为红色*/
+				color: red;
+			}
+			
+			input:read-write{
+				border: 2px solid blue;
+			}
+			
+			input:read-only{
+				border:2px solid cyan;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<form action="">
+			<label>你的名字：<input type="text" name="name"/ required></label><br>
+			<label>你的性别：<input type="text" name="sex"/></label><br>
+			<label>你的年龄：<input type="text" name="age" disabled/></label><br>
+			<label>你的生日：<input type="text" name="age" readonly/></label><br>
+			
+			<label>你是否想去旅行？
+				<input type="radio" name="check1"/><span>是</span>
+				<input type="radio" name="check1"/><span>否</span>
+			</label><br>
+			<label>你是否想去云南大理？
+				<input type="radio" name="check2"/><span>是</span>
+				<input type="radio" name="check2"/><span>否</span>
+			</label><br>
+			<label>你是否想去丽江，昆明，西双版纳？
+				<input type="radio" name="check3"/><span>是</span>
+				<input type="radio" name="check3"/><span>否</span>
+			</label><br>
+			
+			<label>
+				<input type="email" name="email" style="color: black;"/>
+			</label><br>
+			
+			<label>你给大理打多少分？
+				<input type="number" min="10" max="99" value="66" style="color:black;"/>
+			</label><br>
+			
+			
+			<button type="submit">提交</button>
+			
+		</form>
+	</body>
+</html>

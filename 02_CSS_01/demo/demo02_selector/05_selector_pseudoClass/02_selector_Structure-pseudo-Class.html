@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结构伪类选择器</title>
+		
+		<!-- :root 选择器匹配文档根元素。在 HTML 中，根元素始终是 html 元素。
+			 :empty 选择器匹配没有子元素（包括文本节点）的每个元素。
+			 :first-child 选择器用于匹配父元素下第一个子元素。
+			 :first-of-type 选择器匹配父元素下相同类型的子元素中的第一个。
+			 :last-child 选择器匹配父元素下最后一个子元素。  
+			 /* 因为浏览最后会加一个script元素，所以最后一个p元素变为倒数第二个了，颜色不会变成紫色，可以使用last-of-type进行匹配*/
+			 :last-of-type 选择器匹配父元素下相同类型的子元素中的最后一个。
+			 :only-child 选择器匹配父元素下唯一子元素
+			 :only-of-type 选择器匹配父元素下唯一类型的子元素
+			 
+			 :nth-child(n) 选择器匹配属于其父元素的第 n 个子元素，不论元素的类型。 n 可以是数字、关键词或公式。
+			 :nth-last-child(n) 选择器匹配属于其元素的倒数第 n 个子元素，不论元素的类型，从最后一个子元素开始计数。
+			 /* 因为浏览最后会加一个script元素，所以最后一个p元素变为倒数第二个了，颜色不会变成紫色，可以使用last-of-type进行匹配*/
+			 :nth-last-of-type(n) 选择器匹配属于父元素的指定类型的倒数第 n 个子元素。
+			 :nth-of-type(n) 选择器匹配属于父元素的指定类型的第 n 个子元素。
+		-->
+		
+		<style type="text/css">
+			:empty{
+				/*可以设置width和height把元素撑开 */
+				width:100px;
+				height: 20px;
+				background-color: red;
+			}
+			div:first-child{ /* 挑选body元素的第一个子元素 第一个子元素为div  对于p来说span都是他的第一个子元素*/
+				background-color:yellow;
+			}
+			
+			p:first-of-type{ /* 挑选body里首个p元素背景色为粉色*/
+				background-color:pink;
+			}
+			
+			p:last-child{ /* 因为浏览最后会加一个script元素，所以最后一个p元素变为倒数第二个了，颜色不会变成紫色，可以使用last-of-type进行匹配*/
+				background-color:purple;
+			}
+			
+			p:last-of-type{ /* 因为浏览最后会加一个script元素，所以最后一个p元素变为倒数第二个了，可以使用last-of-type进行匹配*/
+				background-color:purple;
+			}
+			
+			span:only-of-type{  /* body下面的span元素和p元素里面的span元素都是唯一的*/
+				background-color:green;
+			}
+			
+			span:only-child{ /* 因为span在body和p下面都不是唯一的子元素，所以都定位不到*/
+				background-color:green;
+			}
+			
+			
+		</style>
+		
+	</head>
+	
+	
+	<body>
+		<div>lorem</div>
+		<div></div>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus alias pariatur sapiente! Similique quas sint blanditiis deserunt officiis accusamus voluptates velit quis recusandae, provident quidem, minima, tempora harum laborum. Natus?</p>
+		<div></div>
+		
+		<span>尾崎八项：</span>
+		<p>1、<span>emerging force</span> 力之涌现<strong>111</strong></p>
+		<p>2、<span>birth of sky</span> 天之降诞<strong>111</strong></p>
+		<p>3、<span>awakening earth</span> 地之觉醒<strong>111</strong></p>
+		<p>4、<span>life of water</span> 水之生灵<strong>111</strong></p>
+		<p>5、<span>life of wind</span> 风之涌动<strong>111</strong></p>
+		<p>6、<span>life of ice</span> 冰之固结<strong>111</strong></p>
+		<p>7、<span>master of six lives</span> 命之主宰<strong>111</strong></p>
+		<p>8、<span>act of ultimate trust</span> 终极信任<strong>111</strong></p>
+	</body>
+</html>
