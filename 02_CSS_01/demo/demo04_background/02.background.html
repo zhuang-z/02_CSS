@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>背景 background</title>
+		<style type="text/css">
+			textarea{
+				background-image: url("cover.png");
+				background-repeat:no-repeat;
+				
+				/*背景图片的大小，
+				percentage：占父元素的百分比   length：设置宽度和高度 
+				cover	把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。
+				背景图像的某些部分也许无法显示在背景定位区域中。
+				contain	把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。
+				*/
+				background-size:100%;
+				
+				/*background-attachment设置背景图像是否固定或者随着页面的其余部分滚动。
+				 scroll	背景图片随页面的其余部分滚动,不随元素滚动而滚动。这是默认
+				 fixed	背景图像是固定的  且不受 background-size 的控制
+				 inherit	指定background-attachment的设置应该从父元素继承
+				 local	背景图片随滚动元素滚动
+				 */
+				background-attachment:local;
+			}
+			
+			/*外边距margin 边框border 内边距padding 内容 元素由这四种盒子属性组成*/
+			div{
+				margin-left: 30px;
+				margin-top: 30px;
+				
+				border:25px dotted #429296;
+				
+				padding:25px;
+				
+				background-repeat:no-repeat;
+				background-size: 5%;
+				background-image: url("cover.png");
+				/*background-origin 属性规定 background-position 属性相对于什么位置来定位。
+				 padding-box	背景图像相对于内边距框来定位。
+				 border-box	背景图像相对于边框盒来定位。
+				 content-box	背景图像相对于内容框来定位。
+				 */
+				background-origin:padding-box;
+				
+				/*background-clip 属性指定背景显示区域。值和background-origin一样 */
+				background-clip: content-box;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<textarea>
+		《道德经》
+		道可道，非常道；名可名，非常名。
+		无名，天地之始，有名，万物之母。
+		故常无欲，以观其妙，常有欲，以观其徼。
+		此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。
+		</textarea>
+		
+		<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium excepturi ab consectetur, accusantium nobis labore consequuntur perspiciatis adipisci blanditiis quas nostrum in illo illum perferendis ipsum harum. Magnam, rem.</div>
+		
+	</body>
+</html>
