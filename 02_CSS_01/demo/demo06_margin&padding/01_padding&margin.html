@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>padding&margin 内边距&外边距</title>
+		
+		<style type="text/css">
+			p{
+				border:2px solid red;
+				background-color:lightblue;
+				background-clip:content-box;
+				/* padding:50px 20em 20% 20%;   /*四个：上 右 下 左  两个：上下，左右 三个：上 左右 下 一个：四个值一样 */ 
+				margin:auto;   /* auto能使元素居中 使用auto的条件：1.只能用于块级元素，2要定宽度*/
+				width:220px;
+			}
+			img{
+				height:120px;
+				width:120px;
+				
+				margin:120px; /* 设置图片的外边距*/ 
+				
+			}
+			
+			.box1{
+				height:150px;
+				width:150px;
+				background-color: pink;
+				margin-bottom:100px;   
+			}
+			/*box1和box2之间各设置了100px，理论上应该有200px间距，但实际上只有100px的间距，发生了margin塌陷
+			 如果两个元素之间的外边距不一样，会选择最大的那个外边距作为两个元素之间的边距*/
+			.box2{
+				height:100px;
+				width:100px;
+				background-color:lightblue;
+				margin-top:100px;
+			}
+			
+			/*box4嵌套在box3里面，本应该box4距离box3的上边距有100px的，实际上是box3距上一个元素的外边距有100px，
+			也发生了margin塌陷，嵌套 */
+			.box3{
+				height:150px;
+				width:150px;
+				background-color: pink;
+			}
+			
+			.box4{
+				height:50px;
+				width:100px;
+				background-color:lightblue;
+				margin-top:100px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<p>天行健，君子以自强不息。</p>
+		
+		<img src="favicon.png" alt="logo">
+		<img src="favicon.png" alt="logo">
+		<img src="favicon.png" alt="logo">
+		<img src="favicon.png" alt="logo">
+		<img src="favicon.png" alt="logo">
+		<img src="favicon.png" alt="logo">
+		
+		<div class="box1"></div>
+		<div class="box2"></div>
+		
+		<div class="box3">
+			<div class="box4"></div>
+		</div>
+		
+	</body>
+</html>

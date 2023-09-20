@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border 圆角边框&图像边框</title>
+		<style>
+				.p1{
+					border:1px solid black;
+					border-radius:15px  30px;  
+					/* 15px指定水平半径 30px指定垂直半径 只写一个水平和垂直半径一样的 
+					写15px 30px 的话是左上角和右下角一对  右上角和左下角一对
+					写15px / 30px才能对四个角设定一样的样式
+					border-radius:30px 50% 3em 15px / 15px 20% 3em 30px; 设置四个角，前后成一对，百分比是其父元素的百分比
+					border-radius 左上角 右上角 左下角 右下角*/
+				}
+				
+				.p2{
+					border:30px solid transparent;   /* transparent边框颜色为透明*/
+					margin-top:30px;
+					border-image-source: url(favicon.png);
+					border-image-width:30px;    
+					border-image-slice:10 ;    /* 不能加px单位 写10就表示10px了*/
+					/*border-image -slice属性指定顶部，右，底部，左边缘的图像向内偏移，分为九个区域：四个角，四边和中间。图像中间部分将被丢弃（完全透明的处理），除非填写关键字。如果省略第四个数字/百分比，它和第二个相同的。如果也省略了第三个，它和第一个是相同的。如果也省略了第二个，它和第一个是相同的。 */
+					border-image-repeat: space; 
+					/*border-image-repeat 值
+					stretch 拉伸切分图，默认 
+					repeat 重复切分图，导致图像被裁断
+					round 在不截断图像的前提下，重复切分图像并拉伸图像以填满整个区域
+					space 在不截断图像的前提下，重复切分图像并在图像之间保留一定的间距以填满整个区域
+					*/
+					border-image-outset:10px;
+					/*border-image-outset 属性规定边框图像超出边框盒的量。在上、右、下、左侧。如果忽略第四个值，则与第二个值相同。如果省略第三个值，则与第一个值相同。如果省略第二个值，则与第一个值相同。不允许任何负值作为 border-image-outset 值。 */
+				}
+		</style>
+	</head>
+	
+	<body>
+		<p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, qui eius. Deserunt reiciendis, ab aperiam aliquid quibusdam repellendus magni perferendis suscipit quae debitis eius, ut cupiditate minus! Dolorum, veniam pariatur.</p>
+		<p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, atque beatae ipsum dolorem sed reiciendis modi natus saepe eligendi recusandae minus hic, quas inventore laboriosam facilis. Natus eius commodi consequatur!</p>
+	</body>
+</html>

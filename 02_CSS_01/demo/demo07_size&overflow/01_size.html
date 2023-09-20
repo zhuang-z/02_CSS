@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>size 设置元素的尺寸</title>
+		
+		<!--元素有 外边距，边界，内边距和内容 -->
+		<style type="text/css">
+			.img1{
+				width:240px;
+				height:240px;
+				border:20px double red;
+				padding:20px;  
+				/* 这样设置图片的像素为280px*280px 设置图片为240px*240px的话要设置width和height为200px
+				box-sizing属性，假如您需要设置240*240的图像 将box-sizing设置为 "border-box"。
+				这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。*/
+				box-sizing:border-box;
+			}
+			
+			.img2{
+				width:50%;
+				height: 50%;
+				min-width: 250px;
+				max-width:500px;
+				min-height:250px;
+				max-height:500px; /* 设置最大最小尺寸*/
+			}
+			
+			.p1{
+				width:800px;
+				border:1px solid green;
+			}
+			.p2{
+				border:2px solid pink;
+				max-width:800px;  /* 当浏览器宽度小于800时能让元素显示完整*/
+				min-width:650px;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<img class="img1" src="scenery.png" alt="风景">
+		<img class="img2" src="scenery.png" alt="风景">
+		
+		<p class="p1">天行健，君子以自强不息。</p>
+		<p class="p2">亦余心之所善兮，吾将上下而求索。</p>
+	</body>
+</html>

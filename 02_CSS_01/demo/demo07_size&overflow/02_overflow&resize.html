@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>overflow 溢出</title>
+		
+		<style type="text/css">
+			.p1{
+				border:1px solid lightgreen;
+				width:300px;
+				height:50px;  /* 这么设定p1的内容会溢出到p2，导致页面很混乱*/
+				overflow:scroll; /* scroll会出现，即使内容能全部放在框中，还是会出现滚动条，auto会自动适配*/
+				/*visible	默认值。内容不会被修剪，会呈现在元素框之外。
+				hidden	内容会被修剪，并且其余内容是不可见的。
+				scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+				auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+				inherit	规定应该从父元素继承 overflow 属性的值。
+				overflow-x 和 overflow-y是指定水平和垂直方向的溢出
+				
+				当overflow的值不为visible的时候，还可以设置一个resize属性
+				值：none，默认，不允许调整；
+				both，水平和垂直都能调整；
+				horizontal：水平
+				vertical：垂直
+ */
+				resize:horizontal;
+			}
+			.p2{
+				border:1px solid lightgreen;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel, placeat praesentium dicta deleniti omnis temporibus velit iure ea rem voluptas? Ipsum tempora, animi optio eligendi asperiores at quaerat corporis.</p>
+		<p class="p2">Hi</p>
+		
+	</body>
+</html>
