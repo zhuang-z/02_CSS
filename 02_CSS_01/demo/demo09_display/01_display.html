@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>display inline block inline-block visibility</title>
+		<style type="text/css">
+			/*CSS的优先级：
+			内嵌CSS样式(元素内) > 内部CSS样式(html中的style) >外部样式表(link stylesheet) >浏览器用户自定义css样式表 >浏览器默认样式表 */
+			span {
+				display: block;
+				/* 使span这个行内元素变成块级元素，直接独占整行，可以设置宽
+				   行内元素设置宽是不生效的*/
+			}
+
+			/*导航栏纵向显示 */
+			#a a {
+				display: block;
+				background: cyan;
+				text-align: center;
+				margin-top: 5px;
+			}
+
+			h2 {
+				display: inline;
+				/* 使块级元素变成行内元素，且不能设置宽，margin-top和margin-bottom，
+				能设置左右边距 好处：把无序列表可以变成一行显示*/
+			}
+
+			#ul li {
+				display: inline;
+			}
+
+			#inline-block p {
+				/*行内块元素 可以用来设置横向的菜单栏*/
+				display: inline-block;
+				width: 6em;
+				border: dashed;
+			}
+
+			#a1 a {
+				display: inline-block;
+				width: 200px;
+				height: 50px;
+				background: cyan;
+				text-align: center;
+				line-height: 50px;
+			}
+
+			#oo {
+				display: none;
+				/* 使这个P元素直接不显示*/
+				
+			}
+			
+			#oi{
+				/*visibility visible默认的 hidden元素不显示但是占据位置，要在块级元素上才生效*/
+				visibility:hidden;
+			}
+			
+			/*display还有很多其他的样式都可以修改 */
+			
+		</style>
+
+	</head>
+
+	<body>
+		<span>看山是山。</span>
+		<span>看山是山，看水是水。</span>
+		<span>看山还是山，看水还是水。</span>
+		<div id="a">
+			<a href="https://www.bilibili.com" target="_blank">B站</a>
+			<a href="https://www.baidu.com" target="_blank">百度</a>
+			<a href="https://www.iqiyi.com" target="_blank">爱奇艺</a>
+		</div>
+		
+		<h2>看山是山。</h2>
+		<h2>看山是山，看水是水。</h2>
+		<h2>看山还是山，看水还是水。</h2>
+
+		<ul id="ul">
+			<li>B站</a></li>
+			<li>百度</a></li>
+			<li>爱奇艺</a></li>
+		</ul>
+
+		<div id="inline-block">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+			<p>看山不是山，看水不是水。</p>Quis dolores asperiores quidem ipsa exercitationem nulla, hic nisi blanditiis voluptatum
+			velit debitis accusamus magnam. Laboriosam tenetur illo cupiditate, dolorem harum sint.
+		</div>
+
+		<div id="a1">
+			<a href="https://www.bilibili.com" target="_blank">B站</a>
+			<a href="https://www.baidu.com" target="_blank">百度</a>
+			<a href="https://www.iqiyi.com" target="_blank">爱奇艺</a>
+		</div>
+
+		<p>看山是山。</p>
+		<p id="oo">看山不是山，看水不是水</p>
+		<p>看山还是山，看水不是水</p>
+		<p id="oi">看山是山，看水是水。</p>
+		<p>看山还是山，看水还是水。</p>
+
+	</body>
+</html>

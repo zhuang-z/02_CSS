@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>box-shadow 阴影</title>
+		<style type="text/css">
+			div{
+				width:200px;
+				height:200px;
+				/*box-shadow 属性向框添加一个或多个阴影。
+				box-shadow: h-shadow v-shadow blur spread color inset; 
+				注意：box-shadow 向框添加一个或多个阴影。该属性是由逗号分隔的阴影列表，
+				每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。省略长度的值是 0。
+				h-shadow	必需。水平阴影的位置。允许负值。
+				v-shadow	必需。垂直阴影的位置。允许负值。
+				blur	可选。模糊距离。  数值越大越模糊
+				spread	可选。阴影的尺寸。
+				color	可选。阴影的颜色。
+				inset	可选。将外部阴影 (outset) 改为内部阴*/
+				margin:auto;
+				box-shadow: 0 0 8px 10px pink,0 0 8px 20px yellow,0 0 8px 30px green,0 0 8px 30px blue inset;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div></div>
+	</body>
+</html>
