@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>实现两列布局</title>
+    <style type="text/css">
+        /* 利用float实现两列布局 
+		float 属性定义元素在哪个方向浮动。
+		none	默认值。元素不浮动，并会显示在其在文本中出现的位置。
+		left	元素向左浮动。
+		right	元素向右浮动。*/
+        div.left {
+			background-color:pink;
+			width:50%;
+			/*display: inline-block;  使用display:inline-block的话需要把两个块级元素之间的换行去掉才能各占一半布局*/
+			/*使用float向左浮动 */
+			padding:10px;
+			float:left;
+			box-sizing:border-box;
+        }
+
+        div.right {
+			background-color:lightblue;
+            width:50%;
+			/* display: inline-block; */
+			/*使用float向右浮动 
+			默认情况下，宽度指定的元素内容区域的宽度，
+			如果要设置内边距的话就会撑开这个盒子，需要设置box-sizing为border-box*/	
+			padding:10px;
+			float:right;
+			box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>两列布局演示</h1>
+    <div class="left">
+        <h2>左侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+    </div>
+    <div class="right">
+        <h2>右侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+    </div>
+
+</body></html>

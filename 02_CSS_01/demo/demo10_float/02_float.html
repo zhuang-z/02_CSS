@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>实现三列布局</title>
+    <style type="text/css">
+        div.left {
+            width:33.33%;
+			background-color:pink;
+			float:left;
+			box-sizing: border-box;
+			padding:10px;
+        }  
+
+        div.middle {
+            width:33.33%;
+			background-color:cornsilk;
+			float:left;   
+			/*中间的要居中只能向左浮动，如果像右浮动的话，
+			根据代码的执行顺序middle先于right，先浮动在右边，占了位置，right就只能在中间了*/
+			box-sizing:border-box;
+			padding:10px;
+        }    
+
+        div.right {
+            width:33.33%;
+			background-color:lightblue;
+			float:right;
+			box-sizing:border-box;
+			padding:10px;
+        }
+		
+		/*right 文字过多会让页脚footer的文字环绕它，如要清除环绕的话需使用clear元素
+		 clear属性指定段落的左侧或右侧不允许浮动的元素。
+		 none	默认值。允许浮动元素出现在两侧。
+		 left	在左侧不允许浮动元素。
+		 right	在右侧不允许浮动元素。
+		 both	在左右两侧均不允许浮动元素。*/
+		footer{
+			clear:left;
+		}
+    </style>
+</head>
+<body>
+    <h1>三列布局演示</h1>
+    <div class="left">
+        <h2>左侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+    </div>
+    <div class="middle">
+        <h2>中间列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi laudantium sed dolorem, perferendis aperiam, esse dolor blanditiis officia maiores, optio neque velit aliquid consequuntur vitae earum reprehenderit repudiandae beatae nisi.</p>
+    </div>
+    <div class="right">
+        <h2>右侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+    </div>
+	
+	<footer>Copyright © 2020 FishC.com.cn All rights reserved.</footer>
+
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>解决一些神奇的现象</title>
+<style type="text/css">
+        div.pink {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+
+        div.lightblue {
+            background-color: lightblue;
+            width: 200px;
+            height: 100px;  
+            float: left;   
+        }
+
+        div.cornsilk {
+            background-color: cornsilk;
+            width: 300px;
+            height: 100px;
+			clear:both;  */*清除浮动，不清除lightblue会脱离文档流，直接覆盖cornsilk并且浮动在左边 */ 
+        }
+
+        div.seagreen {
+            background-color: seagreen;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="pink"></div>
+<div class="lightblue"></div>
+<div class="cornsilk">I love FishC.com!</div>
+<div class="seagreen"></div>
+
+</body></html>
