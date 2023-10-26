@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>z-index结合sticky属性</title>
+		
+		<style>
+			.pink{
+				width:100px;
+				height: 200px;
+				background-color: pink;
+			}
+			
+			.lightblue{
+				width:100px;
+				height: 50px;
+				background-color: lightblue;
+				position:sticky;
+				bottom:50%;      /* 为了使lightblue隐藏起来，等到下拉到这个盒子的位置再通过sticky显示出来*/
+				z-index:-1;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="pink"></div>
+		<div class="lightblue"></div>
+		<div class="pink"></div>
+		<div class="lightblue"></div>
+		<div class="pink"></div>
+	</body>
+</html>

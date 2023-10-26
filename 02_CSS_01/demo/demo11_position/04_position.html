@@ -1,0 +1,55 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>实现三列布局</title>
+    <style type="text/css">
+        /* 利用position实现三列布局 */
+        .main {
+            position: relative;
+        }
+
+        .left {
+            background-color: pink;
+            width: 33.33%;
+            position: absolute; /*实现三列布局，脱离文档流然后设置向左的偏移量即可*/
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .middle {
+            background-color: cornsilk;
+            width: 33.33%;
+            position: absolute;  /*实现三列布局，脱离文档流然后设置向左的偏移量即可*/
+            left: 33.33%;	 /*向左偏移33.3%*/	
+            padding: 20px;
+            box-sizing: border-box;
+        }        
+
+        .right {
+            background-color: lightblue;
+            width: 33.33%;
+            position: absolute;  /*实现三列布局，脱离文档流然后设置向左的偏移量即可*/
+            left: 66.66%;	 /*向左偏移66.66%*/	
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>三列布局演示</h1>
+    <div class="main">
+        <div class="left">
+            <h2>左侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+        <div class="middle">
+            <h2>中间列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
+        </div>
+        <div class="right">
+            <h2>右侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+    </div>
+
+</body></html>

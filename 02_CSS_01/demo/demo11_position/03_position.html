@@ -1,0 +1,43 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>道不同而一样很牛逼</title>
+    <style type="text/css">
+        #nav {
+            position: absolute;    /*这个一开始用float:left可以实现这个布局，使用float和positon:absolute也是一样的效果，因为脱离了文档，文档不会给他留位置*/
+            width: 200px;
+            background: pink;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        p {
+            margin-left: 200px;  /*然后再p这里设置外边距即可，一样的效果*/
+            background: cornsilk;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align:center;
+            margin-bottom: 20px;
+            color: white;
+            background: red; 
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a herf="https://ilovefishc.com">主页</a></li>
+            <li><a href="https://fishc.com.cn">论坛</a></li>
+            <li><a href="https://man.ilovefishc.com">宝典</a></li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum suscipit deserunt debitis, ipsam laborum neque repellendus autem, eum cupiditate ab alias commodi nobis obcaecati, beatae inventore iusto mollitia magni laudantium.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laboriosam illum modi repellat, magnam fugit? Dolorem harum animi possimus eum nam distinctio vitae! Deserunt aut earum omnis error officia tempore!</p>
+    <footer>如果你觉得小甲鱼的教程还不错，不要忘记支持一下哦 -&gt; <a href="https://fishc.taobao.com">戳我戳我</a></footer>
+
+</body></html>
