@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BFC Block Formatting Contexts 块级格式化上下文</title>
+		<!-- BFC 在页面内设定一个独立的容器，容器里面的元素不会影响外面的元素，反之亦然
+			BFC规定所有的块级元素都是左对齐，左边距紧挨着父元素的左侧，在同一个BFC，每个块级元素独占一行
+			BFC只对这个BFC里面的元素生效。
+			
+			创建新的BFC的条件，满足任意一条即可：
+				1.float属性值不为none；
+				2.position属性值不为static或者relative；
+				3.overflow属性值不为visible；    使用最多，带来的副作用最小
+				4.display属性值为flex，inline-flex，inline-block，table-cell或table-caption；
+		 -->
+
+		<style type="text/css">
+			.container{
+				width:500px;
+				height:500px;
+				border: 1px solid black;
+			}
+			
+			#one {
+				width:200px;
+				height:100px;
+				background: lightblue;
+			}
+
+			#two {
+				width: 100px;
+				height: 100px;
+				background: cornsilk;
+			}
+
+			#three {
+				width: 300px;
+				height: 100px;
+				background: pink;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="one"></div>
+			<div id="two"></div>
+			<div id="three"></div>
+		</div>
+	</body>
+</html>

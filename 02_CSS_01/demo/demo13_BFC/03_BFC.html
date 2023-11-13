@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BFC Block Formatting Contexts</title>
+		<!-- BFC 容纳浮动元素&阻止文本环绕 -->
+		
+		<style type="text/css">
+			.container{
+				background-color: pink;
+				overflow:hidden;
+			}
+			p{
+				background-color: lightblue;
+				float:left;   
+				/* P是浮动元素，如果要使container的背景色显示出来，可以让container浮动，
+				或者有一个空元素设置属性clear：both清楚浮动，或者新建一个新的BFC*/
+				margin:10px;
+			}
+			
+			img{
+				width:50px;
+				float:left; /* 文字环绕图片*/
+			}
+			
+			div{
+				overflow:hidden;  /* 新建BFC 文字即可取消环绕图片*/
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<p>qu lv xing</p>
+			<p>qu lv xing</p>
+		</div>
+		
+		<img src="conan.gif" alt="conan">
+		<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus ducimus deleniti soluta pariatur quia itaque ut fuga qui, dolorum odit doloremque veritatis id impedit eveniet delectus dicta facilis quaerat!</div>
+		
+	</body>
+</html>
