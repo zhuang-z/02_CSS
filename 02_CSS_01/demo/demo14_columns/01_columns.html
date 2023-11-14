@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实现两列布局&自动将文本分成多列</title>
+
+		<style type="text/css">
+			.col {
+				column-count: 2;
+				/* column-count:指定某个元素应分为的列数。*/
+				column-gap: 20px;
+				/* column-gap的属性指定的列之间的间距。*/
+				column-rule: 5px solid black;
+				/* column-rule属性设置列之间的线的宽度，样式和颜色。*/
+				
+			}
+
+			.left {
+				padding: 20px;
+				background-color: pink;
+				box-sizing: border-box;
+			}
+
+			.right {
+				padding: 20px;
+				background-color: lightblue;
+				box-sizing: border-box;
+			}
+
+			.cols {
+				margin-top: 20px;
+				column-count: 5;
+				column-width: 200px; 
+				/* 限定最小列的最小宽度，当浏览器的宽度不足以容纳这个宽度的列数时，会自动减少列数
+					可以简写成columns:5 200px;
+				*/
+			}
+			h2{
+				column-span: all; /* 使当前属性能横跨多列*/
+			}
+				/*column-fill:balance 使当前内容均匀分配成多列  auto，按顺序填充 */
+		</style>
+	</head>
+
+	<body>
+		<div class="col">
+			<div class="left">
+				<h1>左侧巴拉巴拉</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates pariatur accusamus soluta
+					voluptatibus modi enim laboriosam porro saepe reprehenderit quam sequi blanditiis iure, at, eius
+					aliquid nam eligendi error delectus.</p>
+			</div>
+			<div class="right">
+				<h1>右侧巴拉巴拉</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sunt veritatis consequatur ratione
+					officia officiis asperiores minima est optio alias quaerat repellendus exercitationem eum eveniet
+					molestias sequi, aliquam voluptatum incidunt!</p>
+			</div>
+		</div>
+
+		<div class="cols">
+			<h2>自动将文本分成多列，你想分成多少列就分成多少列</h2>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi debitis doloribus repellendus, odio eius
+				maiores, inventore esse ratione sed eligendi iure porro error doloremque, sit perspiciatis provident
+				modi assumenda distinctio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
+				repellendus autem quo, atque consectetur a voluptas quod beatae nostrum eos aut quam deleniti possimus,
+				vitae praesentium cupiditate illum odio nesciunt! Lorem ipsum, dolor sit amet consectetur adipisicing
+				elit. Quibusdam saepe numquam ducimus sit tempore, tenetur aliquid quae corrupti alias sint ea id
+				pariatur veritatis mollitia delectus ut eum asperiores fuga! Lorem ipsum dolor sit amet consectetur
+				adipisicing elit. Fugiat voluptatem tempore, laboriosam aliquam magni repellat deleniti vero. Rerum
+				veniam earum ipsa. Magni neque possimus blanditiis laboriosam praesentium quia atque delectus! Lorem,
+				ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eaque sapiente. Alias ad eligendi
+				numquam minus explicabo ducimus. Cumque amet harum eum aliquam eos est corrupti dolor eveniet excepturi
+				consectetur.</p>
+		</div>
+
+	</body>
+</html>
