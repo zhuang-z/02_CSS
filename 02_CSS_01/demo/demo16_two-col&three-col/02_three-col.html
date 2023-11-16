@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>三列布局 浮动大法&绝对定位</title>
+		<!-- 左列向左浮，右列向右浮 中间主内容设置外边距防止覆盖 注意点，中间的主内容一定要再左右列的后面 -->
+		<!-- 绝对定位 左右列跳出文档流，左列定在左上角，右列定在右上角，中间设置外边距防止覆盖 -->
+
+		<style type="text/css">
+			.left {
+				width: 200px;
+				height: 500px;
+				background-color: pink;
+				float: left;
+				/* position:absolute; top:0; left:0; */
+			}
+
+			.right {
+				width: 200px;
+				height: 500px;
+				background-color: lightblue;
+				float: right;
+				/* position:absolute; top:0; right:0; */
+			}
+
+			.center {
+				height: 500px;
+				background-color: cornsilk;
+				margin: 0 200px;
+			}
+			/* 
+			.container{
+				position:relative;
+			}
+			 */
+		</style>
+
+	</head>
+
+	<body>
+		<!-- <div class="container"> -->
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="center"></div>
+		<!-- </div> -->
+	</body>
+</html>

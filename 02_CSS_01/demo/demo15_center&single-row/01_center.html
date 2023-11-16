@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>居中</title>
+		
+		<style type="text/css">
+			div{
+				width:200px;
+				height: 200px;
+				background-color: darkred;
+				border-radius:20px;  /* 添加圆角边框*/
+				text-align:center;    /* 行内元素的水平居中设置 text-align:center;即可*/
+				
+				/*块级元素的垂直和水平居中：设置position:absolute;margin:auto;top:0;right:0;bottom:0;left:0; */
+				/* 垂直和水平居中：设置positon:absolute;使元素脱离原来的文档流；设置top:0;right:0;bottom:0;left:0 使元素撑满整个父元素，然后设置宽高会让浏览器有多余的可分配空间，auto会让浏览器自动均匀分配*/
+				/* 块级元素水平居中：margin:0 auto; 块级元素占一整行，设置块级元素的宽之后，浏览器就有多余的可分配空间，auto会让浏览器自动均匀分配 */
+				position:absolute;
+				margin:auto;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+				
+			}
+			
+			span{
+				color: white;
+				line-height:200px;  /* 行内元素的垂直居中，使行内元素的行高等于其父元素的高度即可*/
+			}
+			
+			.container{
+				width:500px;
+				height:500px;
+				position:absolute;
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container"><div><span>中</span></div></div>
+	</body>
+</html>

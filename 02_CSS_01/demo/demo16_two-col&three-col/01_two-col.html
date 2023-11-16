@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>两列布局</title>
+
+		<style type="text/css">
+			.container1{
+				max-width:1024px;
+				margin:0 auto;
+				overflow: hidden;
+			}
+			.left {
+				width: 50%;  /* 设置成占父元素的百分比，缩放浏览器不会因为宽度不够直接到下一行*/
+				background-color: pink;
+				float:left;
+				padding: 20px;
+				box-sizing: border-box;  /* box-sizing:盒子的内容，边框盒子 它们将包含边框和内边距的空间*/
+			}
+
+			.right {
+				width: 50%;
+				background-color: lightblue;
+				float:left;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			
+			.container2{
+				overflow: hidden;
+				margin-top:100px;
+			}
+			aside{
+				width: 200px;
+				height: 300px;
+				background-color: pink;
+				float:left;  /* 也可以使用position实现，设置position:absolute; top:0; left:0;还需要设置container2 的postion:relative或者absolute即可，非static即可*/
+			}
+			main{
+				height: 300px;
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container1">
+			<div class="left">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt iste eos labore id cum? Aliquid possimus
+				mollitia assumenda voluptas hic nisi ad quaerat dignissimos cumque? Amet necessitatibus iure libero
+				deleniti.
+			</div>
+			<div class="right">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore architecto eaque distinctio eius
+				quidem nulla molestias nesciunt nemo sit consectetur, eos, cupiditate error! Iste, minima!
+			</div>
+		</div>
+		
+		<div class="container2">
+			<aside></aside>
+			<main></main>
+		</div>
+	</body>
+</html>

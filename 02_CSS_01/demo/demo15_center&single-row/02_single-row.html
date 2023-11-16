@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>单列布局</title>
+		
+		<style type="text/css">
+			.content{
+				max-width: 1024px;
+				margin: 0 auto;
+				text-align:center;
+			}
+			
+			header{
+				height: 50px;
+				background-color: antiquewhite;
+				line-height: 50px;
+			}
+			main{
+				height: 200px;
+				background-color: aqua;
+				line-height: 200px;
+			}
+			footer{
+				height: 50px;
+				background-color: blue;
+				line-height:50px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header>   <!-- header和footer的最大宽度没有限制-->
+			<div class="content">头部</div>
+		</header>  
+		<main class="content">主内容</main> <!-- main的最大宽度有最大宽度的限制-->
+		<footer>
+			<div class="content">尾部</div>
+		</footer>
+	</body>
+</html>
