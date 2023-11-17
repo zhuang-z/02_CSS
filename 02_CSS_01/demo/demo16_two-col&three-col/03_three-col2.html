@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>三列布局2 margin负值 之 双飞翼布局</title>
+		<!-- 双飞翼布局在margin负值法的基础上增加页头和页脚使页面布局更完善 -->
+		<style type="text/css">
+			header,footer {
+				width: 100%;
+				height: 20px;
+				background-color: skyblue;
+			}
+			main{
+				overflow:hidden;
+			}
+			
+			.container {
+				width: 100%;
+				float: left;
+			}
+
+			.center {
+				height: 500px;
+				margin: 0 200px;
+				/* 左右都给200px的外边距，如果不用容器装它的话，浏览器会增加一个左右滚动条*/
+				background-color: cornsilk;
+			}
+
+			.left {
+				width: 200px;
+				height: 500px;
+				background-color: pink;
+				margin-left: -100%;
+				/* 不加margin-left:-100%的话，会造成left被挤到下一行去，因为上一行container占据了宽度为100%，*/
+				float: left;
+			}
+
+			.right {
+				width: 200px;
+				height: 500px;
+				background-color: lightblue;
+				float: left;
+				margin-left: -200px;
+				/* 由于右列的宽度是200px，center的右外边距设置的200px，设置margin-left:-200px;刚好把right移到上一行*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<header></header>
+		<main>
+			<div class="container">
+				<div class="center"></div>
+			</div>
+			<div class="left"></div>
+			<div class="right"></div>
+		</main>
+		<footer></footer>
+	</body>
+</html>
