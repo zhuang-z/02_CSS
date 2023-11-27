@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性盒布局</title>
+		
+		<style type="text/css">
+			.flex-container{
+				display: flex;           /* 设定为弹性元素，将弹性元素以块级元素形式显示
+				display:inline-flex;        将弹性元素以行内快元素形式显示，内容有多少，弹性元素就占多大*/
+				flex-wrap: wrap;      /* 缩小浏览器会导致弹性元素溢出，flex-wrap能让弹性元素换行
+				默认是no-wrap,warp-reverse,反向换行*/
+				flex-direction: column;   /* 调整元素的排列方式，row，column，row-rverse反向水平排列，column-reverse反向竖直排列
+				flex-warp和flex-direction合并为flex-flow*/
+				
+				/*主轴，由flex-direction决定，与之垂直的即为垂轴，row-reverse和column-reverse只是改变方向*/
+				background-color: pink;
+			}
+			
+			.inline-flex-container{
+				display:inline-flex;
+				background-color: pink;
+			}
+			
+			.flex-container > div, .inline-flex-container> div {   /* div没有独占一行，接受了弹性盒元素的约束;*/
+				margin:20px;
+				padding:20px;
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="flex-container">
+			<div>one</div>
+			<div>two</div>
+			<div>three</div>
+			<div>four</div>
+			<div>five</div>
+		</div>
+		<br />
+		<div class="inline-flex-container">
+			<div>one</div>
+			<div>two</div>
+			<div>three</div>
+			<div>four</div>
+			<div>five</div>
+		</div>
+	</body>
+</html>

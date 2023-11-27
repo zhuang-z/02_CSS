@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性盒布局添加</title>
+		<style type="text/css">
+			*{
+				outline:1px dotted #ccc;
+				margin:10px;
+				padding: 10px;
+			}
+			body,nav,main,article{
+				display:flex;
+			}
+			body,article{
+				flex-direction: column;
+			}
+			
+			img{
+				width:200px;
+				margin:0 auto;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<header><h2>小甲鱼的部落格</h2></header>
+		    <nav>
+		        <a href="#">主页</a>
+		        <a href="https://ilovefishc.com" target="_blank">视频</a>
+		        <a href="https://fishc.com.cn" target="_blank">论坛</a>
+		        <a href="https://man.ilovefishc.com" target="_blank">宝典</a>
+		        <a href="https://fishc.taobao.com" target="_blank">起飞</a>
+		    </nav>
+		    <main>
+		        <article>
+		            <img src="images/Doraemon.gif" alt="Doraemon">
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestiae explicabo animi ullam necessitatibus nam. Nam veniam expedita doloremque veritatis?</p>
+		        </article>
+		        <article>
+		            <img src="images/SailorMoon.gif" alt="SailorMoon">
+		            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quisquam repellat fuga voluptates labore voluptas enim quia. Nemo, iste praesentium.</p>
+		        </article>
+		        <article>
+		            <img src="images/Popeye.gif" alt="Popeye">
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptate illo provident repudiandae reprehenderit minima accusamus ratione iste, commodi suscipit?</p>
+		        </article>        
+		    </main>
+		    <footer>Copyright © 2020, FishC.</footer>
+	</body>
+</html>
