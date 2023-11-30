@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>压缩弹性元素</title>
+		<style type="text/css">
+			.flex-container {
+				display: flex;
+				width: 1024px;   
+				background-color: pink;
+			}
+
+			.flex-container>div {
+				/* (250+40+40)*5=1650 比1024要大  压缩之后的大小250-(1650-1024)/5=124.8
+					弹性容器小于元素的总尺寸的时候，会尽可能的压缩弹性元素的空间
+					但是这种压缩不是无休止的，宽度小于一定值还是会发生溢出
+				*/
+				width: 250px;     
+				margin: 20px;
+				padding: 20px;
+				color: white;
+				text-align: center;
+				background-color: lightblue;
+			}
+
+			.special2 {
+				/*flex-shrink 属性指定了 flex 元素的收缩规则，默认值是1 0的话是不参与压缩 */
+				flex-shrink: 2;
+			}
+
+			.special4 {
+				flex-shrink: 4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div>one</div>
+			<div>two</div>
+			<div class="special2">three</div>
+			<div class="special4">four</div>  <!-- 这个元素压缩完之后会保留内边距和外边距以及元素需要的最小空间，压缩的时候计算需要把它放到一边，(1650-1024)/5-->
+			<div>five</div>
+		</div>
+
+	</body>
+</html>

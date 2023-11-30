@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>放大弹性元素</title>
+		<style type="text/css">
+			.flex-container{
+				width: 1024px;
+				display: flex;
+				background-color: pink;
+			}
+			.flex-container > div{
+				width:80px;
+				margin:20px;
+				padding:20px;
+				background-color: lightblue;
+			}
+			
+			.grow1{
+				flex-grow: 1;   /* 把元素放大一倍   1024-(80+40+40)*5=224px 224/4=56 80+56=138*/
+			}
+			.grow3{
+				flex-grow:3;   /* 80+56*3=248*/
+			}
+			
+			.basis1{
+				flex-basis: 300px;
+				/* 弹性元素缩放之前的基准尺寸，
+				flex-basis比width和height要灵活，当flex-direction调成column时，设置的尺寸会自动变成高度
+				flex-basis当与width和height设置的大小发生冲突时，flex-basis会对他们进行覆盖
+				
+				flex元素相当于 flex-grow flex-shrink flex-basis  默认值是 0 1 auto  flex为auto时 1 1 auto   为none时 0 0 auto
+				弹性元素不会发生margin塌陷
+				 */
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="flex-container">
+			<div>One</div>
+			<div>Two</div>
+			<div class="grow1">Three</div>
+			<div class="grow3">Four</div>
+			<div class="basis1">Five</div>
+		</div>
+	</body>
+</html>

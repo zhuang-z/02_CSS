@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>垂轴的对齐</title>
+		<style type="text/css">
+			.flex-container{
+				display: flex;
+				height: 500px;
+				background-color: pink;
+				align-items:baseline; /* 改变所有弹性元素的样式*/
+				/*align-items 属性定义 flex 子项在 flex 容器的当前行的侧轴（纵轴）方向上的对齐方式。
+					stretch	默认值。元素被拉伸以适应容器。如果指定侧轴大小的属性值为’auto’，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照’min/max-width/height’属性的限制。
+					center	元素位于容器的中心。弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+					flex-start	元素位于容器的开头。弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+					flex-end	元素位于容器的结尾。弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+					baseline	元素位于容器的基线上。如弹性盒子元素的行内轴与侧轴为同一条，则该值与’flex-start’等效。其它情况下，该值将参与基线对齐。
+				 
+				 
+				 align-self  改变单个弹性元素的样式 属性值和align-items一样
+				 
+				 align-content元素 针对多行弹性元素的，指定每一行在垂轴上的对齐方式
+				 属性值和justify-content的属性值一样，而且弹性盒需要能够换行flex-wrap设置，不然没有作用
+				 
+				 align-items和align-content的区别：
+				 align-items是以弹性元素的内容为单位进行对齐，align-content是以一整行弹性元素去对齐；
+				 */
+				
+			}
+			.flex-container > div{
+				margin:20px;
+				padding:10px;
+				background-color: lightblue;
+			}
+			
+			
+			.flex-container > div:nth-of-type(1){
+				order:1; /* order的值越大，顺序越靠后，默认是0*/
+			}
+			
+			.flex-container >div:nth-of-type(5){
+				order:-1;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="flex-container">
+			<div>One</div>
+			<div>Two<br>Two</div>
+			<div>Three<br>Three<br>Three</div>
+			<div>Four<br>Four<br>Four<br>Four</div>
+			<div>Five<br>Five<br>Five<br>Five<br>Five</div>
+		</div>
+	</body>
+</html>
