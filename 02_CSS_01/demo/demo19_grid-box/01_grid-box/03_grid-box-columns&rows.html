@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格布局 行 列</title>
+		
+		<style type="text/css">
+			.grid-container{
+				display:grid;
+				padding:10px;
+				grid-gap:10px;
+				height:600px;
+				grid-template-columns:200px 50% 100px;  
+				grid-template-rows:1fr 2fr; /* 是按照栅格容器的高度占比，如果不设置高度，按内容的进行高度占比的设定*/
+				/* grid-template-columns:定义栅格布局列的数量以及尺寸
+				   grid-template-rows:定义栅格布局行的数量以及尺寸
+				   关键字：fr  其他的设定好宽度之后，剩下的独自撑满剩余的空间，平分使用1fr
+				*/
+				
+			   
+				background-color: lightblue;
+			}
+			.grid-container > div{
+				background-color: pink;
+				text-align:center;
+				border:1px solid black;
+				padding:10px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="grid-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+	</body>
+</html>
