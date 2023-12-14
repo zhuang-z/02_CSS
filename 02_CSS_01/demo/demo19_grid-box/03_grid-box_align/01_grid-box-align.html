@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格布局的对齐</title>
+		<style type="text/css">
+			.item1{align-self:stretch;}
+			.item2{}
+			.item3{}
+			.item4{}
+			.item5{}
+			.item6{align-self: stretch;}
+			
+			.grid-container{
+				display:grid;
+				background-color: pink;
+				padding: 10px;
+				grid-template-columns:100px 100px 100px;
+				grid-gap:10px;
+				justify-items:center;   /* 栅格元素的内容之于栅格元素的居中*/
+				/*对齐方式 1.横向对齐 2.竖向对齐
+				 1.横向对齐:justify-content:start end center  space-around;  整个栅格容器的所有栅格元素
+						   justify-items:栅格元素的内容之于栅格元素进行对齐
+						   justify-self:设置单个元素的水平对齐
+				 2.竖向对齐(需要设置一个高度):align-content:start end center space-around;
+						   align-items:栅格元素的内容之于栅格元素进行对齐
+						   align-self:设置单个元素的竖直对齐
+				
+				 place-content,place-items,place-self 是上面content,items,self属性的缩写，用空格隔开
+				 */
+			}
+			
+			.grid-container > div{
+				background-color: lightblue;
+				text-align: center;
+				padding: 10px;
+				border:1px solid white;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="grid-container">
+			<div class="item1">1</div>
+			<div class="item2">2</div>
+			<div class="item3">3</div>
+			<div class="item4">4</div>
+			<div class="item5">5</div>
+			<div class="item6">6</div>
+		</div>
+	</body>
+</html>

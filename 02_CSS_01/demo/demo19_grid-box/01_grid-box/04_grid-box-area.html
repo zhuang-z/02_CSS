@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格布局 区域</title>
+		<style type="text/css">
+			/* 定义区域：grid-area和grid-template-areas 搭配使用
+			   用grid-area属性为不用的元素命名，grid-template-areas使用名称组合来定义栅格布局的形状
+			 */
+			.items1 {grid-area: header;}
+			.items2 {grid-area: nav;}
+			.items3 {grid-area: main;}
+			.items4 {grid-area: aside;}
+			.items5 {grid-area: footer;}
+
+			.grid-container {
+				display: grid;
+				/* display:grid 容器显示为栅格布局*/
+				background-color: lightblue;
+				padding: 10px;
+				/* grid-template-areas使用名称组合来定义栅格布局的形状
+				   1.每一行必须是一个完整的字符串来显示；
+				   2.栅格布局的每个区域必须是矩形的；
+				   3.如果想那个位置留空，可以使用“...”来表示；
+				 */
+				grid-template-areas:
+					/* 多写一个main或者footer，旁边nav和aside的尺寸会变小，反之会变大*/
+					"header header header header header"
+					"nav main main main aside"
+					"nav footer footer footer footer";
+				grid-template-columns:200px 1fr 1fr 1fr 100px;  /* 对每一列的尺寸进行定义*/
+				grid-template-rows:80px 300px 100px;   /* 对每一行的尺寸进行定义*/
+				grid-gap: 10px;  /* 等效于 grid-row-gap:10px; grid-column-gap:10px;  单写的话是先行后列*/
+
+			}
+
+			.grid-container>* {
+				background-color: pink;
+				text-align: center;
+				padding: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="grid-container">
+			<header class="items1">Header</header>
+			<nav class="items2">Nav</nav>
+			<main class="items3">
+				<section>Section1</section>
+				<section>Section2</section>
+				<section>Section3</section>
+				<section>Section4</section>
+				<section>Section5</section>
+			</main>
+			<aside class="items4">Aside</aside>
+			<footer class="items5">Footer</footer>
+		</div>
+	</body>
+</html>

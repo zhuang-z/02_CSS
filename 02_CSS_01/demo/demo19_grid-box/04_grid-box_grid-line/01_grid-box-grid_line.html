@@ -1,0 +1,52 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>放置栅格元素到指定位置</title>
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            padding: 10px;
+		 /*栅格线的名字用[] 一条线不止一个名字 中间用空格隔开*/	
+            grid-template-columns: [first apple] 1fr [banana] 2fr [cat] 3fr [last dog];
+            grid-template-rows: [first one] 100px [two] 200px [last three];
+            background-color: lightblue;
+        }
+        .one {
+		 /* grid-column-start 属性定义项目将在哪条列线上开始。
+			grid-column-end 属性项目将横跨多少列，或者项目会在哪条列线（column-line）上结束。
+			grid-row-start 属性定义项目将在哪条行线上开始。
+			grid-row-end 属性规定项目将横跨多少行，或者项目将在在哪条行线上结束。
+		*/	
+            grid-column-start: banana;
+            grid-column-end: dog;
+            grid-row-start: one;
+            grid-row-end: two;
+        }
+        .two {
+            grid-column-start: first;
+            grid-column-end: last;
+            grid-row-start: two;
+            grid-row-end: three;
+        }
+        .three {
+            grid-column-start: apple;
+            grid-column-end: banana;
+            grid-row-start: first;
+            grid-row-end: two;
+        }
+        .grid-container > div {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid white;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+
+
+</body></html>

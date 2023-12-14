@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格元素的放置规则</title>
+		
+		<style type="text/css">
+			.grid-container{
+				display:grid;
+				grid-template-columns:100px 100px 100px;
+				grid-template-rows:100px 100px;
+				grid-auto-flow: row dense; /* row按行优先排列 column 按列优先排列 dense紧密排列尽量补齐空位*/
+				grid-auto-rows: 100px;  /* 控制超出范围的元素*/
+			}
+			
+			.grid-container > div{
+				text-align: center;
+			}
+			
+			.item1{background-color: aliceblue;/* grid-column: 1 / 3; */;}
+			.item2{background-color: antiquewhite;}
+			.item3{background-color: aqua;}
+			.item4{background-color: aquamarine;/*grid-column:1 / 3;*/}
+			.item5{background-color: pink;}
+			.item6{background-color: bisque;}
+			.item7{background-color: blue;}
+			.item8{background-color: yellowgreen;grid-column: 2 / 3;grid-row:4 /5;}  /* 超出范围*/
+			.item9{background-color: lightblue;grid-column:3 /4;grid-row:5 / 6;}  /* 超出范围*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="grid-container">
+			<div class="item1">1</div>
+			<div class="item2">2</div>
+			<div class="item3">3</div>
+			<div class="item4">4</div>
+			<div class="item5">5</div>
+			<div class="item6">6</div>
+			<div class="item7">7</div>
+			<div class="item8">8</div>
+			<div class="item9">9</div>
+		</div>
+	</body>
+</html>

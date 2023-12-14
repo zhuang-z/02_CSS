@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格布局的关键字和函数</title>
+		<style type="text/css">
+			.grid-container{
+				display: grid;
+				background-color: pink;
+				padding:10px;
+				grid-gap:10px;
+				grid-template-columns:1fr 2fr;  
+				/*  fr:将所有的空间按照几份来分
+				    auto:grid-template-columns:100px auto 100px;  第一列和第三列100px大小，中间的自动分配
+						 grid-template-columns:100px 1fr auto;  第一列100px 第三列自动计算内容所需的最小宽度，中间按照一份分配
+					min-content只能确保最长的的单次能在一行显示完整
+				   	max-content则是尽可能让所有文本在一行显示完整
+					repeat:grid-template-columns:repeat(6,200px);  重复六个200px宽的列
+						   grid-template-columns:repeat(3,200px) repeat(3,100px); 3个200px的列 3个100px的列，如果要自适应的话改成auto即可
+					auto-fill:调整显示的数量  grid-template-columns:repeat(auto-fill,200px);会根据浏览器的尺寸自动调整单元格的数量
+					minmax():显示一个尺寸的范围大小 grid-template-columns:100px minmax(100px 1fr) 300px;  中间列可自适应调整大小
+					auto-fit:auto-fill是通过填充无内容列来适应浏览器宽度的，而auto-fit是调整每一列的宽度来适应浏览器宽度
+					fix-content(100px):按照100px宽度来填充内容
+				*/
+			}
+			
+			.grid-container>div{
+				background-color: lightblue;
+				text-align: center;
+				padding: 10px;
+				border:1px solid white; 
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="grid-container">
+			<div>i love fishc</div>
+			<div>i love fishc</div>
+			<div>i love fishc</div>
+			<div>i love fishc</div>
+			<div>i love fishc</div>
+			<div>i love fishc</div>
+		</div>
+	</body>
+</html>
