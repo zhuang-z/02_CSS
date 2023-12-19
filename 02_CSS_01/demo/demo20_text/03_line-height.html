@@ -1,0 +1,38 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>为什么官方推荐在设置line-height时使用无单位数值</title>
+    <style type="text/css">
+        .lightblue {
+            line-height: 1.5;  /* h1的行高未写单位，是其字体尺寸的1.5倍 1.5*30=45px*/
+            border: solid lightblue;
+        }
+
+        .pink {
+            line-height: 1.5em;  /* h1的行高写了单位，是其父元素字体尺寸的1.5倍 1.5*15=22.5px*/
+            border: solid pink;
+        }
+
+        h1 {
+            font-size: 30px;  
+        }
+
+        .box {
+            width: 18em;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box lightblue">
+        <h1>通过使用无单位的行高避免意外的结果。</h1>
+        <p>使用长度值和百分比来定义行高具有较差的继承行为。。。</p>
+    </div>
+       
+    <div class="box pink">
+        <h1>通过使用无单位的行高避免意外的结果。</h1>
+        <p>使用长度值和百分比来定义行高具有较差的继承行为。。。</p>
+    </div>
+
+</body></html>

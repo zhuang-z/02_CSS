@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>保留空白字符 文字顺序 显示方向 缩进 间距</title>
+		
+		<style type="text/css">
+			.p1{
+				background-color: pink;
+				color:palevioletred;
+				white-space: pre-wrap;   
+				/* 设置如何处理元素内的空白。
+				normal	默认。空白会被浏览器忽略。
+				pre	空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+				nowrap	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+				pre-wrap	保留空白符序列，但是正常地进行换行。
+				pre-line	合并空白符序列，但是保留换行符。
+				 */
+				
+				direction:rtl;  /* 改变字体的显示方向，默认从左至右 ltr 从右至左 rtl*/
+				unicode-bidi: bidi-override; /* bidi-override	创建一个附加的嵌入层面。重新排序取决于 direction 属性。*/
+			}
+			
+			.p2{
+				background-color: lightblue;
+				color:black;
+				writing-mode: vertical-rl;  
+				/*默认，horizontal-tb 文字顺序从左至右，正常换行
+					vertical-lr 文字顺序从上到下，下一行在上一行的右侧
+					vertical-rl 文字顺序从上到下，下一行在上一行的左侧
+				*/
+				
+				float:right;
+				white-space: pre-wrap;
+			}
+			
+			.p3{
+				text-indent: 2em;  /* 缩进2个字符*/
+				white-space: pre-wrap;
+				
+				letter-spacing:2em;/*设置字母之间的间距 */
+				line-height:2;
+				/* word-spacing:2em; 设置单词之间的间距
+				   line-height:2; 设置行高,一般不带单位，会比较灵活，带单位可能导致行与行重叠
+				   不写单位，表示行高是字体尺寸的倍数，写单位，其行高要继承其父元素的尺寸；
+				 */
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<p class="p1">
+			我在幻想着，
+			幻想在破灭着，
+			幻想总把破灭宽恕，
+			破灭却从不把幻想放过。
+		</p>
+		
+		<p class="p2">
+			君不见，
+			
+			高堂明镜悲白发，朝如青丝暮成雪。
+			
+			人生得意须尽欢，莫使金樽空对月。
+			
+			天生我材必有用，千金散尽还复来。
+			
+			烹羊宰牛且为乐，会须一饮三百杯。
+			
+			岑夫子，丹丘生，将进酒，杯莫停。
+			
+			与君歌一曲，请君为我倾耳听。
+			
+			钟鼓馔玉不足贵，但愿长醉不愿醒。
+			
+			古来圣贤皆寂寞，惟有饮者留其名。
+			
+			陈王昔时宴平乐，斗酒十千恣欢谑。
+			
+			主人何为言少钱，径须沽取对君酌。
+			
+			五花马，千金裘，
+			
+			呼儿将出换美酒，与尔同销万古愁。
+		</p>
+		
+		<p class="p3">
+			北斗七星高，
+			哥舒夜带刀。
+			至今窥牧马，
+			不敢过临洮。
+		</p>
+	</body>
+</html>
